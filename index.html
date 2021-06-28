@@ -150,7 +150,132 @@
 					</section>
 
 				</section>
-				
+				<section>
+					<section>
+						<h3>jQuery Event Methods</h3>
+						<p>jQuery responds to events (mouseover and mouseout) in an HTML page.</p>
+						<pre data-id="code-animation4">
+							<code  data-trim >
+								&lt!DOCTYPE html&gt
+								&lthtml&gt
+									&lthead&gt
+										<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+										&ltscript&gt
+											$(document).ready(function(){
+  												$("li").mouseover(function(){
+    												$(this).css("background-color", "yellow");
+  												});
+ 													$("li").mouseout(function(){
+    												$(this).css("background-color", "white");
+  												});
+											});
+										&lt/script&gt
+									&lt/head&gt
+									&ltbody&gt
+ 										<ul>
+												<li id="el">Item 1</li>
+												<li id="el">Item 2</li>
+												<li id="el">Item 3</li>    
+										</ul>
+									&lt/body&gt
+								&lt/html&gt
+							</code>
+						</pre>
+						
+						<p style="font-size: xx-small;">Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>	
+					</section>
+					<section>
+						<h3>jQuery - Add Elements</h3>
+						<p>Adding new HTML elements/content example.</p>
+						<pre data-id="code-animation5">
+							<code  data-trim >
+								&lt!DOCTYPE html&gt
+								&lthtml&gt
+									&lthead&gt
+										<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+										&ltscript&gt
+										$(document).ready(function(){
+											$("#button").click(function(){
+											  $("p").append(" <p>New text</p>");
+											});
+										});
+										&lt/script&gt
+									&lt/head&gt
+									&ltbody&gt
+										<p>This is a paragraph.</p>
+										<p>This is another paragraph.</p>
+
+										<button id="button">Append text</button>
+									
+									&lt/body&gt
+								&lt/html&gt
+							</code>
+						</pre>
+						
+						<p style="font-size: xx-small;">Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>	
+					</section>
+				</section>
+				<section>
+					<h3>jQuery - Chaining</h3>
+					<p>With jQuery, you can chain multiple methods (on the same element) within a single statement.</p>
+					<pre data-id="code-animation5">
+						<code  data-trim >
+							&lt!DOCTYPE html&gt
+							&lthtml&gt
+								&lthead&gt
+									<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+									&ltscript&gt
+										$(document).ready(function(){
+											$("button").click(function(){
+										  		$("#p1").css("color", "red").slideUp(2000).slideDown(2000).slideUp(1000).slideDown(1000).slideUp(500).slideDown(500).slideUp(250).slideDown(250);
+												});
+									  	});
+									&lt/script&gt
+								&lt/head&gt
+								&ltbody&gt
+									<p id="p1">jQuery chaining methods!</p>
+									<button>Click me</button>
+								&lt/body&gt
+							&lt/html&gt
+						</code>
+					</pre>
+					
+					<p style="font-size: xx-small;">Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>	
+				</section>
+				<section>
+					<h3>jQuery Callback Functions</h3>
+					<p>Callback function is executed after the current effect/function is finished.</p>
+					<pre data-id="code-animation5">
+						<code  data-trim >
+							&lt!DOCTYPE html&gt
+							&lthtml&gt
+								&lthead&gt
+									<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+									&ltscript&gt
+										$(document).ready(function(){
+											$("button").click(function(){
+										  		$("p").hide("slow", function(){
+														alert("The paragraph is now hidden");
+										  		});
+											});
+										});
+									&lt/script&gt
+								&lt/head&gt
+								&ltbody&gt
+
+									<button>Hide</button>
+
+									<p>This text is in paragraph tag.</p>
+								
+								&lt/body&gt
+							&lt/html&gt
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h3>Thank you!</h3>
+					<p> Enjoy it!</p>
+				</section>
 			</div>
 		</div>
 
