@@ -46,7 +46,7 @@
 				<section>
 					<section>
 						<h2 data-id="code-title">Adding jQuery to Your Web Pages</h2>
-						<h3> Two versions of jQuery available for downloading:</h3>
+						<p> Two versions of jQuery available for downloading:</p>
 						<ul>
 							<li>Production version - minified and compressed</li>
 							<li>Development version - for testing and development - readable code</li>
@@ -60,9 +60,97 @@
 						</pre>
 						<p style="font-size: xx-small;">Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>
 					</section>
-					<section>Slide 4</section>
-					<section>Slide 5</section>
+					<section>
+						<h3 data-id="code-title">Adding jQuery - you can include it from a CDN</h3> 
+						<p>(Content Delivery Network).</p>
+						<pre data-id="code-animation1">
+							<code class="language-html" data-trim data-line-numbers>
+								&lthead&gt
+								<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+								&lt/head&gt
+							</code>
+						</pre>
+						<p style="font-size: xx-small;">Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>						
+
+					</section>
+					<!--section>Slide 5</section-->
 				</section>
+				<section>
+					<section>
+						<h3>jQuery Syntax</h3>
+						<p>With jQuery you (1-st) select HTML elements and (2-nd) perform "actions" on them.</p>
+						<p>Basic syntax is:</p>
+						<pre data-id="code-animation2">
+							<code  data-trim >
+								$(selector).action()
+							</code>
+						</pre>
+
+						<p style="font-size: xx-small;">Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>	
+	
+					</section>
+					<section>
+						<h3>jQuery Syntax Examples</h3>
+						<pre data-id="code-animation3">
+							<code  data-trim >
+								$(this).hide() - hides the current element.
+
+								$("p").hide() - hides all &ltp&gt elements.
+
+								$(".test").hide() - hides all elements with class="test".
+
+								$("#test").hide() - hides the element with id="test".
+							</code>
+						</pre>
+						<p>All jQuery methods in our examples, are inside a document ready event - waiting the document to finish loading:</p>
+						<pre data-id="code-animation4">
+							<code  data-trim >
+								$(document).ready(function(){
+
+									// jQuery methods go here...
+								  
+								});
+							</code>
+						</pre>
+						<p style="font-size: xx-small;">Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>	
+
+					</section>
+					<section>
+						<h3>jQuery Example - Select element and Change It</h3>
+						<pre data-id="code-animation3">
+							<code  data-trim >
+								&lthtml&gt
+									&lthead&gt
+    									<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    									<script>
+    									$( document ).ready(function() {
+        									console.log( "document loaded" );
+        									$("#test").css("color","green");
+    									});
+
+    									function changeColor(){
+        									$("#test").css("color","red");
+    									}
+ 
+    									$( window ).on( "load", function() {
+        									console.log( "window loaded" );
+    									});
+    									</script>
+									&lt/head&gt
+									&ltbody&gt
+    									<input type="button" value="Change color" onclick=changeColor()>
+    									<p id = "test">Testing jQuery1</p>
+									&lt/body&gt
+								&lt/html&gt
+							</code>
+						</pre>
+						
+						<p style="font-size: xx-small;">Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p>	
+
+					</section>
+
+				</section>
+				
 			</div>
 		</div>
 
